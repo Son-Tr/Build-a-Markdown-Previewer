@@ -11,13 +11,13 @@ import { uploadMarkdown } from '../redux/markdownReducer';
     }
 
   return (
-    <div className="container">
+    <>
       <textarea 
         id="editor" 
         value={markdown} 
         onChange={handleChange} 
       />
-    </div>
+    </>
   )
 }
 export default Editor;

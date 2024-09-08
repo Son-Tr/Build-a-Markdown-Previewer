@@ -1,0 +1,115 @@
+body {
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #FFCAB1, #FCFC62);
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------- APP ---------------------------------- */
+.app {
+    margin: 3rem;
+    height: 100%;
+}
+
+.title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.author {
+    text-align: center;
+    margin-top: 0.5rem;
+
+}
+
+.author a {
+   text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: all linear 0.3s;;
+
+}
+
+.author a:hover{
+    color:#E05263
+}
+
+
+
+/* -------------------------------- container ------------------------------- */
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.divide {
+    width: 0.5rem;
+    background-color: #CCCCCC;
+    cursor: ew-resize;
+}
+
+/* --------------------------------- Editor part--------------------------------- */
+.editor-part,
+.previewer-part {
+    flex-basis: 50%;
+    overflow:hidden;
+    position: relative;
+}
+
+.editor-part {
+    overflow-x: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+#editor {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    padding: 0 1rem;
+    border: none;
+}
+
+/* --------------------------------- toolbar -------------------------------- */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #29339B;
+    color: #f6f2f0;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 0.5rem;
+}
+
+.toolbar h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+.icon{
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.icon:hover{
+    color:#E05263;
+}
+
+
+/* --------------------------------- Preview part-------------------------------- */
+.previewer-part {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+#preview {
+    padding: 0 1rem;
+}
+
+#preview img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+}

@@ -9,7 +9,7 @@ export const uploadMarkdown =(markdown)=>({
 const initialState={
     markdown: `# Heading 1
 ## Heading 2
-[Link](https://www.example.com)
+[Link](https://github.com/Son-Tr)
 \`inline code\`
 \`\`\`
 code block
