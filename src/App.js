@@ -55,8 +55,10 @@ function App() {
     }
     const containerOffSetLeft = document.querySelector(".container").offsetLeft;
     const newLeftWidth = e.clientX - containerOffSetLeft;
+    if (newLeftWidth > 100 && newLeftWidth < window.innerWidth - 100) {
+      setWidth(`${newLeftWidth}px`)
+    }
 
-    setWidth(`${newLeftWidth}px`)
   }
 
   // finish drag divide
@@ -72,7 +74,7 @@ function App() {
       document.removeEventListener("mousemove", handleOnMouseMove);
       document.removeEventListener("mouseup", handleOnMouseUp);
     }
-  
+
     return () => {
       document.removeEventListener("mousemove", handleOnMouseMove);
       document.removeEventListener("mouseup", handleOnMouseUp);
@@ -84,7 +86,7 @@ function App() {
       <h1 className='title'>Mardown Previewer</h1>
       <p className='author'>by <a href="https://github.com/Son-Tr" target='_blank' rel="noopener noreferrer">Son-Tr</a></p>
       <div className='container' >
-        <div className='editor-part' style={{width: width}}>
+        <div className='editor-part' style={{ width: width }}>
           <div className="toolbar">
             <h2 >Editor</h2>
             <span className="icon" onClick={() => { handleToggleMaximize("editor") }}>
@@ -94,7 +96,7 @@ function App() {
           <Editor />
         </div>
         <div className='divide' onMouseDown={handleOnMouseDown}></div>
-        <div className='previewer-part' style={{width:`calc(100%- ${width}-8px)`}}>
+        <div className='previewer-part' style={{ width: `calc(100%- ${width}-8px)` }}>
           <div className="toolbar">
             <h2 >Previewer</h2>
             <span className="icon" onClick={() => { handleToggleMaximize("previewer") }}>
