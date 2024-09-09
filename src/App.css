@@ -51,8 +51,7 @@ body {
 }
 
 /* --------------------------------- Editor part--------------------------------- */
-.editor-part,
-.previewer-part {
+.editor-part {
     width: 50%;
     overflow:hidden;
     position: relative;
@@ -70,6 +69,10 @@ body {
     resize: none;
     padding: 0 1rem;
     border: none;
+}
+
+#editor:focus-visible{
+    outline: none;
 }
 
 /* --------------------------------- toolbar -------------------------------- */
@@ -101,7 +104,11 @@ body {
 
 /* --------------------------------- Preview part-------------------------------- */
 .previewer-part {
+    /* width: calc(100%-50%-8px); */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    overflow:clip;
+    position: relative;
+    height: auto;
 }
 
 
@@ -113,4 +120,12 @@ body {
     display: block;
     max-width: 90%;
     margin: 2rem auto;
+}
+
+#preview pre{
+    background-color: #7A918D;
+    padding: 1rem;
+    overflow: hidden;
+    overflow-x: auto;
+    opacity: 0.8;
 }

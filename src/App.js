@@ -55,7 +55,7 @@ function App() {
     }
     const containerOffSetLeft = document.querySelector(".container").offsetLeft;
     const newLeftWidth = e.clientX - containerOffSetLeft;
-    if (newLeftWidth > 100 && newLeftWidth < window.innerWidth - 100) {
+    if (newLeftWidth > 100 && newLeftWidth < window.innerWidth - 400) {
       setWidth(`${newLeftWidth}px`)
     }
 
@@ -96,7 +96,7 @@ function App() {
           <Editor />
         </div>
         <div className='divide' onMouseDown={handleOnMouseDown}></div>
-        <div className='previewer-part' style={{ width: `calc(100%- ${width}-8px)` }}>
+        <div className='previewer-part' style={{ width: `calc(100% - ${width} - 8px)` }}>
           <div className="toolbar">
             <h2 >Previewer</h2>
             <span className="icon" onClick={() => { handleToggleMaximize("previewer") }}>
