@@ -22,11 +22,14 @@ function App() {
         document.querySelector(".previewer-part").style.display = "none";
         document.querySelector(".divide").style.display = "none";
         setIsMaximize(!isMaximize);
+        setWidth("100%")
+        document.querySelector(".editor-part").style.height = window.innerWidth > 768 ? "auto" : "300px";// check responsive
         document.querySelector("#editor").style.height = "100vh";
       } else {
         document.querySelector(".previewer-part").style.display = "block";
         document.querySelector(".divide").style.display = "block";
         setIsMaximize(!isMaximize);
+        setWidth( window.innerWidth <361?"70%"  : "50%") // check responsive
         document.querySelector("#editor").style.height = "100%";
       }
     } else {
@@ -34,10 +37,12 @@ function App() {
         document.querySelector(".editor-part").style.display = "none";
         document.querySelector(".divide").style.display = "none";
         setIsMaximize(!isMaximize);
+        setWidth("0%")
       } else {
         document.querySelector(".editor-part").style.display = "block";
         document.querySelector(".divide").style.display = "block";
         setIsMaximize(!isMaximize);
+        setWidth("50%")
       }
     }
 

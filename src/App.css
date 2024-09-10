@@ -4,6 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
+/* html{
+    scroll-behavior: smooth;
+} */
 
 /* ----------------------------------- APP ---------------------------------- */
 .app {
@@ -52,7 +55,6 @@ body {
 
 /* --------------------------------- Editor part--------------------------------- */
 .editor-part {
-    width: 50%;
     overflow:hidden;
     position: relative;
     height: auto;
@@ -129,4 +131,47 @@ body {
     overflow: hidden;
     overflow-x: auto;
     opacity: 0.8;
+}
+
+
+/* ------------------------------- responsive ------------------------------- */
+@media screen and (max-width: 768px) {
+    .app {
+        margin: 2rem;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+    .author{
+        font-size: 0.8rem;
+    }
+    /* container */
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    /* divide */
+    .divide{
+        display: none !important;
+    }
+    /* editor  */
+    .container .editor-part{
+        height: 320px;
+        overflow-y: auto;
+        width: 70%;
+    }
+
+    /* previewer */
+    .previewer-part{
+        width: 100% !important;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 412px) {
+    .container .editor-part{
+        width: 70% !important;
+    }
 }
