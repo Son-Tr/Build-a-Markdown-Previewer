@@ -29,7 +29,7 @@ function App() {
         document.querySelector(".previewer-part").style.display = "block";
         document.querySelector(".divide").style.display = "block";
         setIsMaximize(!isMaximize);
-        setWidth( window.innerWidth <361?"70%"  : "50%") // check responsive
+        setWidth(window.innerWidth < 361 ? "70%" : "50%") // check responsive
         document.querySelector("#editor").style.height = "100%";
       }
     } else {
@@ -88,7 +88,7 @@ function App() {
 
   return (
     <div className='app'>
-      <h1 className='title'>Mardown Previewer</h1>
+      <h1 className='title'>Markdown Previewer</h1>
       <p className='author'>by <a href="https://github.com/Son-Tr" target='_blank' rel="noopener noreferrer">Son-Tr</a></p>
       <div className='container' >
         <div className='editor-part' style={{ width: width }}>
