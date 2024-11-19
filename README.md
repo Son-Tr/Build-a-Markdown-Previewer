@@ -17,7 +17,7 @@ The Markdown Previewer is a real-time editor that allows users to write and prev
 - User-friendly interface with a split editor and preview layout.  
 
 ## Live Demo  
-You can view the live demo of the project here: [Insert your live demo link here]  
+You can view the live demo of the project here: [(https://markdown-previewer-project-son-tr.vercel.app/)]  
 
 ## Acknowledgments  
 - Thanks to **FreeCodeCamp** for providing the inspiration and guidance for this project. 
